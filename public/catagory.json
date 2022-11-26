@@ -1,0 +1,318 @@
+
+
+[
+
+    [
+        {
+            "catagory_id": "1",
+            "img": "https://i.ibb.co/P981pTM/Samsung-Galaxy-A51.jpg",
+            "name": "Samsung Galaxy A51",
+            "original_price": "38000",
+            "resale_price": "22000",
+            "use": "1 years",
+            "seller_name": "Nazmul Bhuyian",
+            "location": "Dahaka"
+        },
+        {
+            "catagory_id": "1",
+            "img": "https://i.ibb.co/dDy5Sr2/m53.jpg",
+            "name": "Samsung Galaxy M53",
+            "original_price": "36000",
+            "resale_price": "27000",
+            "use": "4 month",
+            "seller_name": "Zabad Hossain",
+            "location": "Cumilla"
+        },
+        {
+            "catagory_id": "1",
+            "img": "https://i.ibb.co/Y4CJr23/m13.png",
+            "name": "Samsung Galaxy M13",
+            "original_price": "24000",
+            "resale_price": "16000",
+            "use": "8 month",
+            "seller_name": "Nozul Nafiz",
+            "location": "Naraongonj"
+        }
+    ],
+    [
+        {
+            "catagory_id": "2",
+            "img": "https://i.ibb.co/Dr0sw77/Redmi-Note-11.webp",
+            "name": "Redmi Note 11T",
+            "original_price": "38000",
+            "resale_price": "14000",
+            "use": "2 years",
+            "seller_name": "Sakil Ahmed",
+            "location": "Noakhali"
+        },
+        {
+            "catagory_id": "2",
+            "img": "https://i.ibb.co/BTkq28j/xiaomi-redmi-note-8.jpg",
+            "name": "Redmi Note 8",
+            "original_price": "27000",
+            "resale_price": "16000",
+            "use": "4 month",
+            "seller_name": "Sojib Uddin",
+            "location": "Khulna"
+        },
+        {
+            "catagory_id": "2",
+            "img": "https://i.ibb.co/cFsD9Bc/note-11se.jpg",
+            "name": "Redmi Note 11SE",
+            "resale_price": "31000",
+            "original_price": "22000",
+            "use": "7 month",
+            "seller_name": "Roni Ahmed",
+            "location": "Borisal"
+        }
+    ],
+    
+    [
+        {
+            "catagory_id": "3",
+            "img": "https://i.ibb.co/LhnS6kF/x80.jpg",
+            "name": "Vivo X80",
+            "original_price": "28000",
+            "resale_price": "14000",
+            "use": "1 years",
+            "seller_name": "AlaUddin Khan",
+            "location": "Rongpur"
+        },
+        {
+            "catagory_id": "3",
+            "img": "https://i.ibb.co/c2TdQgG/vivo-T2x.jpg",
+            "name": "Vivo T2X",
+            "original_price": "27000",
+            "resale_price": "22000",
+            "use": "2 month",
+            "seller_name": "Sovon Mahmud",
+            "location": "Gulsan"
+        },
+        {
+            "catagory_id": "3",
+            "img": "https://i.ibb.co/19GZJwD/y40.webp",
+            "name": "Vivo Y40",
+            "resale_price": "24000",
+            "original_price": "17000",
+            "use": "7 month",
+            "seller_name": "Sultan Ahmed",
+            "location": "Danmondi"
+        }
+    ]
+]
+
+[
+    {
+        "catagory_id": "1",
+        "title": "Samsung Brands",
+        "image": "https://i.ibb.co/zrg407Z/main.webp",
+        "collections": [
+            {
+                "catagory_id": "1",
+                "img": "https://i.ibb.co/P981pTM/Samsung-Galaxy-A51.jpg",
+                "name": "Samsung Galaxy A51",
+                "original_price": "38000",
+                "resale_price": "22000",
+                "use": "1 years",
+                "seller_name": "Nazmul Bhuyian",
+                "location": "Dahaka"
+            },
+            {
+                "catagory_id": "1",
+                "img": "https://i.ibb.co/Y4CJr23/m13.png",
+                "name": "Samsung Galaxy M13",
+                "original_price": "24000",
+                "resale_price": "16000",
+                "use": "8 month",
+                "seller_name": "Nozul Nafiz",
+                "location": "Naraongonj"
+            },
+            {
+                "catagory_id": "1",
+                "img": "https://i.ibb.co/dDy5Sr2/m53.jpg",
+                "name": "Samsung Galaxy M53",
+                "original_price": "36000",
+                "resale_price": "27000",
+                "use": "4 month",
+                "seller_name": "Zabad Hossain",
+                "location": "Cumilla"
+            }
+        ]
+    },
+    {
+        "catagory_id": "2",
+        "title": "Redmi Brands",
+        "image": "https://i.ibb.co/hZF7fvC/Xiaomi-Redmi-10-A.jpg",
+        "collections": [
+            {
+                "catagory_id": "2",
+                "img": "https://i.ibb.co/Dr0sw77/Redmi-Note-11.webp",
+                "name": "Redmi Note 11T",
+                "original_price": "38000",
+                "resale_price": "14000",
+                "use": "2 years",
+                "seller_name": "Sakil Ahmed",
+                "location": "Noakhali"
+            },
+            {
+                "catagory_id": "2",
+                "img": "https://i.ibb.co/BTkq28j/xiaomi-redmi-note-8.jpg",
+                "name": "Redmi Note 8",
+                "original_price": "27000",
+                "resale_price": "16000",
+                "use": "4 month",
+                "seller_name": "Sojib Uddin",
+                "location": "Khulna"
+            },
+            {
+                "catagory_id": "2",
+                "img": "https://i.ibb.co/cFsD9Bc/note-11se.jpg",
+                "name": "Redmi Note 11SE",
+                "resale_price": "31000",
+                "original_price": "22000",
+                "use": "7 month",
+                "seller_name": "Roni Ahmed",
+                "location": "Borisal"
+            }
+        ]
+    },
+    {
+        "catagory_id": "3",
+        "title": "Vivo Brands",
+        "image": "https://i.ibb.co/RzWV289/main.jpg",
+        "collections": [
+            {
+                "catagory_id": "3",
+                "img": "https://i.ibb.co/LhnS6kF/x80.jpg",
+                "name": "Vivo X80",
+                "original_price": "28000",
+                "resale_price": "14000",
+                "use": "1 years",
+                "seller_name": "AlaUddin Khan",
+                "location": "Rongpur"
+            },
+            {
+                "catagory_id": "3",
+                "img": "https://i.ibb.co/c2TdQgG/vivo-T2x.jpg",
+                "name": "Vivo T2X",
+                "original_price": "27000",
+                "resale_price": "22000",
+                "use": "2 month",
+                "seller_name": "Sovon Mahmud",
+                "location": "Gulsan"
+            },
+            {
+                "catagory_id": "3",
+                "img": "https://i.ibb.co/19GZJwD/y40.webp",
+                "name": "Vivo Y40",
+                "resale_price": "24000",
+                "original_price": "17000",
+                "use": "7 month",
+                "seller_name": "Sultan Ahmed",
+                "location": "Danmondi"
+            }
+        ]
+    }
+]
+
+
+
+
+[
+    {
+        "catagory_id": "1",
+        "collections": [
+            {
+                "img": "https://i.ibb.co/P981pTM/Samsung-Galaxy-A51.jpg",
+                "name": "Samsung Galaxy A51",
+                "original_price": "38000",
+                "resale_price": "22000",
+                "use": "1 years",
+                "seller_name": "Nazmul Bhuyian",
+                "location": "Dahaka"
+            },
+            {
+                "img": "https://i.ibb.co/Y4CJr23/m13.png",
+                "name": "Samsung Galaxy M13",
+                "original_price": "24000",
+                "resale_price": "16000",
+                "use": "8 month",
+                "seller_name": "Nozul Nafiz",
+                "location": "Naraongonj"
+            },
+            {
+                "img": "https://i.ibb.co/dDy5Sr2/m53.jpg",
+                "name": "Samsung Galaxy M53",
+                "original_price": "36000",
+                "resale_price": "27000",
+                "use": "4 month",
+                "seller_name": "Zabad Hossain",
+                "location": "Cumilla"
+            }
+        ]
+    },
+    {
+        "catagory_id": "2",
+        "collections": [
+            {
+                "img": "https://i.ibb.co/Dr0sw77/Redmi-Note-11.webp",
+                "name": "Redmi Note 11T",
+                "original_price": "38000",
+                "resale_price": "14000",
+                "use": "2 years",
+                "seller_name": "Sakil Ahmed",
+                "location": "Noakhali"
+            },
+            {
+                "img": "https://i.ibb.co/BTkq28j/xiaomi-redmi-note-8.jpg",
+                "name": "Redmi Note 8",
+                "original_price": "27000",
+                "resale_price": "16000",
+                "use": "4 month",
+                "seller_name": "Sojib Uddin",
+                "location": "Khulna"
+            },
+            {
+                "img": "https://i.ibb.co/cFsD9Bc/note-11se.jpg",
+                "name": "Redmi Note 11SE",
+                "resale_price": "31000",
+                "original_price": "22000",
+                "use": "7 month",
+                "seller_name": "Roni Ahmed",
+                "location": "Borisal"
+            }
+        ]
+    },
+    {
+        "catagory_id": "3",
+        "collections": [
+            {
+                "img": "https://i.ibb.co/LhnS6kF/x80.jpg",
+                "name": "Vivo X80",
+                "original_price": "28000",
+                "resale_price": "14000",
+                "use": "1 years",
+                "seller_name": "AlaUddin Khan",
+                "location": "Rongpur"
+            },
+            {
+                "img": "https://i.ibb.co/c2TdQgG/vivo-T2x.jpg",
+                "name": "Vivo T2X",
+                "original_price": "27000",
+                "resale_price": "22000",
+                "use": "2 month",
+                "seller_name": "Sovon Mahmud",
+                "location": "Gulsan"
+            },
+            {
+                "img": "https://i.ibb.co/19GZJwD/y40.webp",
+                "name": "Vivo Y40",
+                "resale_price": "24000",
+                "original_price": "17000",
+                "use": "7 month",
+                "seller_name": "Sultan Ahmed",
+                "location": "Danmondi"
+            }
+        ]
+    }  
+]
