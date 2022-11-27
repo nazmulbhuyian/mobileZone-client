@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
+import UseToken from '../Hooks/UseToken';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const SignUp = () => {
@@ -15,12 +16,12 @@ const SignUp = () => {
 
     const navigate = useNavigate();
 
-    // const [createdUserEmail, setCreatedUserEmail] = useState('')
-    // const [token] = useToken(createdUserEmail)
+    const [createdUserEmail, setCreatedUserEmail] = useState('')
+    const [token] = UseToken(createdUserEmail)
 
-    // if (token) {
-    //     navigate('/')
-    // }
+    if (token) {
+        navigate('/')
+    }
 
 
     const handleSignUp = data => {
@@ -56,9 +57,9 @@ const SignUp = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                // setCreatedUserEmail(email)
+                setCreatedUserEmail(email)
                 toast('User created successfully.')
-                navigate('/')
+                // navigate('/')
             })
 
     }
