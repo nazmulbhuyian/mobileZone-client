@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import AdvertisedItem from '../Home/Advertised/AdvertisedItem';
 import Phone from './Phone';
 import PhoneModal from './PhoneModal';
 
 const PhoneCatagory = () => {
 
     const [ totalData ] = useLoaderData();
+    console.log(totalData);
     const {collections} = totalData;
 
     const [items, setItems] = useState([]);

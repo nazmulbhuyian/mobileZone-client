@@ -11,6 +11,7 @@ import Login from "../Login/Login";
 import PhoneCatagory from "../PhoneCatagory/PhoneCatagory";
 import SignUp from "../SignUp/SignUp";
 import AdminRoutes from "./AdminRoutes/AdminRoutes";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import SallerRoute from "./SallerRoute/SallerRoute";
 
 const router = createBrowserRouter([
@@ -33,13 +34,13 @@ const router = createBrowserRouter([
             {
                 path: '/catagory/:id',
                 loader: ({params}) => fetch(`http://localhost:5000/catagories/${params.id}`),
-                element: <PhoneCatagory></PhoneCatagory>
+                element: <PrivateRoute><PhoneCatagory></PhoneCatagory></PrivateRoute>
             }
         ]
     },
     {
         path: '/dashboard',
-        element: <DashboardLayout></DashboardLayout>,
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
             {
                 path: '/dashboard',

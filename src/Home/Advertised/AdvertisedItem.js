@@ -1,36 +1,26 @@
 import React from 'react';
 
-const AdvertisedItem = ({catagory}) => {
+const AdvertisedItem = ({ catagory }) => {
 
-    const { img, location, name, original_price, resale_price, seller_name, use } = catagory;
+    const { img, location, name, original_price, resale_price, use } = catagory;
+    console.log(catagory);
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={img} alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    {name}
-                </h2>
-                <p>{seller_name}</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">{original_price}</div>
-                    <div className="badge badge-outline">{resale_price}</div>
+            <div className="card w-96 bg-base-100 shadow-xl p-12">
+                <figure><img src={img} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">
+                        Product Name: {name}
+                    </h2>
+                    <div className="badge-outline">Original Price: {original_price}</div>
+                    <div className="badge-outline">Resale Price: {resale_price}</div>
+                    <div className="badge-outline">Uses: {use}</div>
+                    <div className="badge-outline">Location: {location}</div>
                 </div>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">{use}</div>
-                    <div className="badge badge-outline">{location}</div>
+                <div className="card-actions justify-center">
+                    <label className="btn btn-primary text-white">Book</label>
                 </div>
             </div>
-            {/* <div className="card-actions justify-center">
-                <label
-                    htmlFor="booking-modal"
-                    onClick={() => setItems(collection)}
-                    className="btn btn-primary text-white">Book</label>
-
-                <label onClick={handleWishlists} className="btn btn-primary text-white">Wishlist</label>
-                <label onClick={handleAdvertised} className="btn btn-primary text-white">Advertised</label>
-            </div> */}
-        </div>
     );
 };
 

@@ -15,10 +15,13 @@ const Catagories = () => {
 
 
     return (
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 ml-10 my-10'>
-            {
-                catagories.map(catagory => <Catagory key={catagory.catagory_id} catagory={catagory}></Catagory>)
-            }
+        <div>
+            <h2 className='text-center text-3xl font-bold text-primary'>Second Hand Phone Brand</h2>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 ml-10 my-10'>
+                {
+                    catagories.map(catagory => <Catagory key={catagory.catagory_id} catagory={catagory}></Catagory>)
+                }
+            </div>
         </div>
     );
 };
