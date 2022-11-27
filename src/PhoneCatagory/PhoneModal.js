@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
-import toast from 'react-hot-toast';
 import { AuthContext } from '../context/AuthProvider';
 
-const PhoneModal = ({ items }) => {
+const PhoneModal = ({ items, setItems }) => {
 
     const { user } = useContext(AuthContext);
     const { name, resale_price, } = items;
@@ -34,15 +33,16 @@ const PhoneModal = ({ items }) => {
             .then(data => {
                 console.log(data);
                 // setTreatment(null)
-                    toast.success('Booking Confirmed')
+                alert('Booking Confirmed')
+                setItems(null)
                 //     refetch()
                 // if (data.acknowledge) {
                 //     setTreatment(null)
-                //     toast.success('Booking Confirmed')
+                //     alert('Booking Confirmed')
                 //     refetch()
                 // }
                 // else {
-                //     toast.error(data.message)
+                //     alert.error(data.message)
                 // }
             })
 

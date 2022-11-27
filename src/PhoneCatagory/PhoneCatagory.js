@@ -9,7 +9,7 @@ const PhoneCatagory = () => {
     const [ totalData ] = useLoaderData();
     const {collections} = totalData;
 
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState(null);
 
 
     return (
@@ -25,7 +25,7 @@ const PhoneCatagory = () => {
                 }
             </div>
             {
-                items &&
+                items && 
                 <PhoneModal
                 items={items}
                 ></PhoneModal>

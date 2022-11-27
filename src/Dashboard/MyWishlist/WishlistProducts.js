@@ -1,5 +1,4 @@
 import React from 'react';
-import toast from 'react-hot-toast';
 
 const WishlistProducts = ({ wishlist }) => {
 
@@ -9,14 +8,13 @@ const WishlistProducts = ({ wishlist }) => {
         fetch(`http://localhost:5000/wishlist/${wishlist._id}`, {
             method: 'DELETE',
             headers: {
-                // authorization: `bearer ${localStorage.getItem('accessToken')}`
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
             }
         })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
-                    toast.success(`${wishlist.name} deleted successfully`)
-                    // refetch();
+                    alert(`${wishlist.name} deleted successfully`)
                 }
             })
     }

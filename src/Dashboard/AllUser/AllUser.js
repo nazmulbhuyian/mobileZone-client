@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import toast from 'react-hot-toast';
 
 const AllUser = () => {
 
@@ -24,8 +23,8 @@ const AllUser = () => {
             .then(data => {
                 console.log(data);
                 // if (data.modifiedCount > 0) {
-                //     toast.success('Make admin successful')
-                //     refetch();
+                //     alert('Make admin successful')
+                    refetch();
                 // }
             })
     }

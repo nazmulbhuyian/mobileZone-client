@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
-import toast from 'react-hot-toast';
 import { AuthContext } from '../context/AuthProvider';
 
 const Phone = ({ collection, setItems }) => {
 
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     const { img, location, name, original_price, resale_price, seller_name, use } = collection;
 
-    const handleAdvertised = () =>{
+    const handleAdvertised = () => {
         const advertised = {
             img,
             name,
@@ -29,22 +28,22 @@ const Phone = ({ collection, setItems }) => {
                 console.log(data);
                 // setTreatment(null)
                 // if(data.acknowledged){
-                //     toast.success('Booking Confirmed')
+                //     alert('Booking Confirmed')
                 // }
-                    
+
                 //     refetch()
                 // if (data.acknowledge) {
                 //     setTreatment(null)
-                //     toast.success('Booking Confirmed')
+                //     alert('Booking Confirmed')
                 //     refetch()
                 // }
                 // else {
-                //     toast.error(data.message)
+                //     alert.error(data.message)
                 // }
             })
     }
 
-    const handleWishlists = () =>{
+    const handleWishlists = () => {
         const wishList = {
             img,
             email: user?.email,
@@ -64,18 +63,18 @@ const Phone = ({ collection, setItems }) => {
             .then(data => {
                 console.log(data);
                 // setTreatment(null)
-                if(data.acknowledged){
-                    toast.success('Booking Confirmed')
+                if (data.acknowledged) {
+                    alert('Booking Confirmed')
                 }
-                    
+
                 //     refetch()
                 // if (data.acknowledge) {
                 //     setTreatment(null)
-                //     toast.success('Booking Confirmed')
+                //     alert('Booking Confirmed')
                 //     refetch()
                 // }
                 // else {
-                //     toast.error(data.message)
+                //     alert.error(data.message)
                 // }
             })
     }

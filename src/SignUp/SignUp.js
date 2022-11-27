@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 import UseToken from '../Hooks/UseToken';
@@ -58,7 +57,7 @@ const SignUp = () => {
             .then(data => {
                 console.log(data);
                 setCreatedUserEmail(email)
-                toast('User created successfully.')
+                alert('User created successfully.')
                 // navigate('/')
             })
 
@@ -100,13 +99,13 @@ const SignUp = () => {
                     </div>
 
                     <div className="form-control w-full max-w-xs">
-                    <label className="label"><span className="label-text">Role</span></label>
-                    <select {...register('role')} className="select input-bordered w-full max-w-xs">
-                        <option disabled selected>Please select a Option</option>
-                        <option>seller</option>
-                        <option>bayer</option>   
-                    </select>
-                </div>
+                        <label className="label"><span className="label-text">Role</span></label>
+                        <select {...register('role')} className="select input-bordered w-full max-w-xs">
+                            <option disabled selected>Please select a Option</option>
+                            <option>seller</option>
+                            <option>bayer</option>
+                        </select>
+                    </div>
 
                     <input className='btn btn-accent w-full mt-5' value='Sign Up' type="submit" />
                     {

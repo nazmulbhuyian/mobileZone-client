@@ -1,13 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const AddProduct = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const imageHostKey = process.env.REACT_APP_imagebb_key;
@@ -39,7 +38,7 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(imgData => {
-                if (imgData.success) {
+                if (imgData) {
                     // console.log(imgData.data.url);
                     const addProduct = {
                         catagory_id: data.catagory_id,
@@ -52,7 +51,7 @@ const AddProduct = () => {
                         seller_name: data.seller_name,
                         location: data.location
                     }
-                     //save doctor information to the database
+                    //save doctor information to the database
 
                     fetch('http://localhost:5000/addProduct', {
                         method: 'POST',
@@ -65,7 +64,7 @@ const AddProduct = () => {
                         .then(res => res.json())
                         .then(result => {
                             console.log(result);
-                            toast.success(`${data.name} is added successfully`)
+                            alert(`${data.name} is added successfully`)
                             // navigate('/dashboard/managedoctors')
                         })
 
