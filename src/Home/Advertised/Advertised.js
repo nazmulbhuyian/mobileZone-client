@@ -16,7 +16,7 @@ const Advertised = () => {
     return (
         <div>
             <h2 className='text-center text-3xl font-bold text-primary'>Advertised Item is Here</h2>
-            <div className='grid grid-cols-3 gap-6 mb-32'>
+            <div className='grid grid-cols-3 gap-6 mb-16'>
                 {
                     catagories.map(catagory => <AdvertisedItem catagory={catagory} key={catagory._id}></AdvertisedItem>)
                 }

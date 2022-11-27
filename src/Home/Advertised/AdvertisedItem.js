@@ -6,7 +6,7 @@ const AdvertisedItem = ({ catagory }) => {
     console.log(catagory);
 
     return (
-            <div className="card w-96 bg-base-100 shadow-xl p-12">
+            <div className="card w-96 bg-base-100 shadow-xl p-8">
                 <figure><img src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
