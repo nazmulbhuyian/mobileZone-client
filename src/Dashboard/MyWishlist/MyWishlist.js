@@ -24,10 +24,13 @@ const MyWishlist = () => {
     })
 
     return (
-        <div className='grid grid-cols-2 gap-8'>
-            {
-                wishlists?.map(wishlist => <WishlistProducts key={wishlist} wishlist={wishlist}></WishlistProducts>)
-            }
+        <div className='my-16'>
+            <h2 className='text-3xl text-center text-primary font-bold mb-8'>Your Wishlist is here: </h2>
+            <div className='grid grid-cols-2 gap-8'>
+                {
+                    wishlists?.map(wishlist => <WishlistProducts key={wishlist} wishlist={wishlist}></WishlistProducts>)
+                }
+            </div>
         </div>
     );
 };
