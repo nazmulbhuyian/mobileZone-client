@@ -7,14 +7,14 @@ import PhoneModal from './PhoneModal';
 const PhoneCatagory = () => {
 
     const [ totalData ] = useLoaderData();
-    console.log(totalData);
     const {collections} = totalData;
 
     const [items, setItems] = useState([]);
 
 
     return (
-        <div>
+        <div className='my-8'>
+            <h2 className='text-center text-primary font-bold text-3xl mb-12'>There is all this catarogy phone</h2>
             <div className='grid grid-cols-3 gap-5'>
                 {
                     collections?.map(collection => <Phone

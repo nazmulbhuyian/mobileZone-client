@@ -81,30 +81,24 @@ const Phone = ({ collection, setItems }) => {
     }
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl p-8">
             <figure><img src={img} alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    {name}
-                </h2>
-                <p>{seller_name}</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">{original_price}</div>
-                    <div className="badge badge-outline">{resale_price}</div>
-                </div>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">{use}</div>
-                    <div className="badge badge-outline">{location}</div>
-                </div>
+            <h2 className="card-title my-2 text-xl font-bold">Phone Name: {name}</h2>
+            <div>
+                <p className=' text-xl font-bold'>Seller Name: {seller_name}</p>
+                <div className="badge-outline my-2 text-xl font-bold">Original Price: {original_price}</div>
+                <div className="badge-outline text-xl font-bold">Resel Price: {resale_price}</div>
+                <div className="badge-outline my-2 text-xl font-bold">Uses: {use}</div>
+                <div className="badge-outline mb-2 text-xl font-bold">Location: {location}</div>
             </div>
-            <div className="card-actions justify-center">
+            <div className="card-actions">
                 <label
                     htmlFor="booking-modal"
                     onClick={() => setItems(collection)}
-                    className="btn btn-primary text-white">Book</label>
+                    className="btn btn-sm btn-warning text-white">Book</label>
 
-                <label onClick={handleWishlists} className="btn btn-primary text-white">Wishlist</label>
-                <label onClick={handleAdvertised} className="btn btn-primary text-white">Advertised</label>
+                <label onClick={handleWishlists} className="btn btn-sm btn-warning text-white">Wishlist</label>
+                <label onClick={handleAdvertised} className="btn btn-sm btn-warning text-white">Advertised</label>
             </div>
         </div>
     );
