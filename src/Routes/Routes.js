@@ -63,6 +63,10 @@ const router = createBrowserRouter([
                 element: <SallerRoute><MyProduct></MyProduct></SallerRoute>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <h3>No data found</h3>
     }
 ])
 export default router;
