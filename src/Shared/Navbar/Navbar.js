@@ -13,7 +13,7 @@ const Navbar = () => {
     }
 
     const menuItems = <React.Fragment>
-        <li className='text-2xl font-bold'><Link to='/'>Home</Link></li>
+        <li className='text-3xl font-bold'><Link to='/'>Home</Link></li>
         {/* <li><Link to='/about'>About</Link></li> */}
         {
             user?.uid ?
