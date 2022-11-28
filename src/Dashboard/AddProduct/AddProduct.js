@@ -1,8 +1,8 @@
-import { useQuery } from '@tanstack/react-query';
+
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const AddProduct = () => {
@@ -13,19 +13,6 @@ const AddProduct = () => {
     const imageHostKey = process.env.REACT_APP_imagebb_key;
 
     const navigate = useNavigate();
-
-    // const { data: specialties, isLoading } = useQuery({
-    //     queryKey: ['specialty'],
-    //     queryFn: async () => {
-    //         const res = await fetch('https://doctor-portal-server-flame.vercel.app/appointmentSpecialty')
-    //         const data = await res.json();
-    //         return data;
-    //     }
-    // })
-
-    // if (isLoading) {
-    //     return <Loading></Loading>
-    // }
 
     const handleAddAProduct = data => {
         console.log(data);
@@ -40,7 +27,6 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(imgData => {
                 if (imgData) {
-                    // console.log(imgData.data.url);
                     const addProduct = {
                         catagory_id: data.catagory_id,
                         name: data.name,
@@ -52,7 +38,6 @@ const AddProduct = () => {
                         seller_name: data.seller_name,
                         location: data.location
                     }
-                    //save doctor information to the database
 
                     fetch('https://mobile-zone-server.vercel.app/addProduct', {
                         method: 'POST',
@@ -155,9 +140,6 @@ const AddProduct = () => {
                 </div>
 
                 <input className='btn btn-accent w-full mt-5' value='Add Product' type="submit" />
-                {/* {
-                        signUpError && <p className='text-red-600'>{signUpError}</p>
-                    } */}
             </form>
         </div>
     );
