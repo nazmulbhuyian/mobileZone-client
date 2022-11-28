@@ -9,7 +9,7 @@ const MyWishlist = () => {
 
     const url = `https://mobile-zone-server.vercel.app/wishlists?email=${user?.email}`
 
-    const { data: wishlists = [] } = useQuery({
+    const { data: wishlists = [], refetch } = useQuery({
         queryKey: ['/wishlists', user?.email],
         queryFn: async () => {
             // const res = await fetch(url)
@@ -28,7 +28,7 @@ const MyWishlist = () => {
             <h2 className='text-3xl text-center text-primary font-bold mb-8'>Your Wishlist is here: </h2>
             <div className='grid grid-cols-2 gap-8'>
                 {
-                    wishlists?.map(wishlist => <WishlistProducts key={wishlist} wishlist={wishlist}></WishlistProducts>)
+                    wishlists?.map(wishlist => <WishlistProducts refetch={refetch} key={wishlist} wishlist={wishlist}></WishlistProducts>)
                 }
             </div>
         </div>

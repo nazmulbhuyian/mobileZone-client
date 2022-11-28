@@ -1,7 +1,7 @@
 import React from 'react';
 import toast from 'react-hot-toast';
 
-const WishlistProducts = ({ wishlist }) => {
+const WishlistProducts = ({ wishlist, refetch }) => {
 
     const { img, name, original_price, resale_price, use } = wishlist;
 
@@ -16,6 +16,7 @@ const WishlistProducts = ({ wishlist }) => {
             .then(data => {
                 if (data.deletedCount > 0) {
                     toast.success(`${wishlist.name} deleted successfully`)
+                    refetch()
                 }
             })
     }

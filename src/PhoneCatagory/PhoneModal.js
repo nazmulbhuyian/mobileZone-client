@@ -33,18 +33,7 @@ const PhoneModal = ({ items, setItems }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                // setTreatment(null)
                 toast.success('Booking Confirmed')
-                setItems(null)
-                //     refetch()
-                // if (data.acknowledge) {
-                //     setTreatment(null)
-                //     alert('Booking Confirmed')
-                //     refetch()
-                // }
-                // else {
-                //     alert.error(data.message)
-                // }
             })
 
     }

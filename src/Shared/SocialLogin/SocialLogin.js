@@ -23,7 +23,7 @@ const SocialLogin = () => {
                 const user = result.user;
                 console.log(user)
                 saveUser(user.email)
-                navigate('/')
+                
                 setCreatedUserEmail(user.email)
             })
             .then(err => console.error(err))
@@ -41,8 +41,9 @@ const SocialLogin = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
+                console.log(data);
                 setCreatedUserEmail(email)
+                navigate('/')
             })
     }
 

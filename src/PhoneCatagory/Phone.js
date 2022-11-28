@@ -26,21 +26,13 @@ const Phone = ({ collection, setItems }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                // setTreatment(null)
-                // if(data.acknowledged){
-                //     alert('Booking Confirmed')
-                // }
-
-                //     refetch()
-                // if (data.acknowledge) {
-                //     setTreatment(null)
-                //     alert('Booking Confirmed')
-                //     refetch()
-                // }
-                // else {
-                //     alert.error(data.message)
-                // }
+                // console.log(data);
+                if(data.acknowledged){
+                    toast.success('Booking Confirmed')
+                }
+                else {
+                    alert.error(data.message)
+                }
             })
     }
 
@@ -63,20 +55,9 @@ const Phone = ({ collection, setItems }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                // setTreatment(null)
                 if (data.acknowledged) {
                     toast.success('Booking Confirmed')
                 }
-
-                //     refetch()
-                // if (data.acknowledge) {
-                //     setTreatment(null)
-                //     alert('Booking Confirmed')
-                //     refetch()
-                // }
-                // else {
-                //     alert.error(data.message)
-                // }
             })
     }
 
