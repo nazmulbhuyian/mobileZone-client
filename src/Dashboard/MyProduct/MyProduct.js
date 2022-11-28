@@ -10,7 +10,7 @@ const MyProduct = () => {
 
     const url = `https://mobile-zone-server.vercel.app/myproducts?email=${user?.email}`
 
-    const { data: products = [] } = useQuery({
+    const { data: products = [], refetch } = useQuery({
         queryKey: ['/myproducts', user?.email],
         queryFn: async () => {
             const res = await fetch(url, {
@@ -25,10 +25,13 @@ const MyProduct = () => {
     console.log(products);
 
     return (
-        <div className='grid grid-cols-2 gap-8'>
-            {
-                products?.map(product => <Product key={product._id} product={product}></Product>)
-            }
+        <div>
+            <h2 className='text-3xl text-center text-primary font-bold mb-8'>Your product is here: </h2>
+            <div className='grid grid-cols-2 gap-8'>
+                {
+                    products?.map(product => <Product key={product._id} product={product} refetch={refetch}></Product>)
+                }
+            </div>
         </div>
     );
 };
