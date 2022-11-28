@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
@@ -53,7 +54,7 @@ const AddProduct = () => {
                     }
                     //save doctor information to the database
 
-                    fetch('http://localhost:5000/addProduct', {
+                    fetch('https://mobile-zone-server.vercel.app/addProduct', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -64,7 +65,7 @@ const AddProduct = () => {
                         .then(res => res.json())
                         .then(result => {
                             console.log(result);
-                            alert(`${data.name} is added successfully`)
+                            toast.success(`${data.name} is added successfully`)
                             // navigate('/dashboard/managedoctors')
                         })
 

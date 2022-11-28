@@ -6,7 +6,7 @@ const Advertised = () => {
     const [catagories, setCatagories] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/advertised')
+        fetch('https://mobile-zone-server.vercel.app/advertised')
             .then(res => res.json())
             .then(data => {
                 setCatagories(data);

@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/catagory/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/catagories/${params.id}`),
+                loader: ({ params }) => fetch(`https://mobile-zone-server.vercel.app/catagories/${params.id}`),
                 element: <PrivateRoute><PhoneCatagory></PhoneCatagory></PrivateRoute>
             }
         ]

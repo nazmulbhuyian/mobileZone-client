@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../context/AuthProvider';
 
 const PhoneModal = ({ items, setItems }) => {
@@ -22,7 +23,7 @@ const PhoneModal = ({ items, setItems }) => {
             price,
             product
         }
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://mobile-zone-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,7 +34,7 @@ const PhoneModal = ({ items, setItems }) => {
             .then(data => {
                 console.log(data);
                 // setTreatment(null)
-                alert('Booking Confirmed')
+                toast.success('Booking Confirmed')
                 setItems(null)
                 //     refetch()
                 // if (data.acknowledge) {

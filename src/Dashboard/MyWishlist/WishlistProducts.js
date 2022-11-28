@@ -1,11 +1,12 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const WishlistProducts = ({ wishlist }) => {
 
     const { img, name, original_price, resale_price, use } = wishlist;
 
     const handleDelete = (wishlist) => {
-        fetch(`http://localhost:5000/wishlist/${wishlist._id}`, {
+        fetch(`https://mobile-zone-server.vercel.app/wishlist/${wishlist._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -14,7 +15,7 @@ const WishlistProducts = ({ wishlist }) => {
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
-                    alert(`${wishlist.name} deleted successfully`)
+                    toast.success(`${wishlist.name} deleted successfully`)
                 }
             })
     }

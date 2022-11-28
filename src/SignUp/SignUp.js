@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 import UseToken from '../Hooks/UseToken';
@@ -46,7 +47,7 @@ const SignUp = () => {
 
     const saveUser = (name, email, role) => {
         const user = { name, email, role };
-        fetch('http://localhost:5000/users', {
+        fetch('https://mobile-zone-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -57,7 +58,7 @@ const SignUp = () => {
             .then(data => {
                 console.log(data);
                 setCreatedUserEmail(email)
-                alert('User created successfully.')
+                toast.success('User created successfully.')
                 // navigate('/')
             })
 
