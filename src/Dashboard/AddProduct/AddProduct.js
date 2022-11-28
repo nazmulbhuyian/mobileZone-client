@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const AddProduct = () => {
@@ -27,7 +27,7 @@ const AddProduct = () => {
     //     return <Loading></Loading>
     // }
 
-    const handleAddADoctor = data => {
+    const handleAddAProduct = data => {
         console.log(data);
         const image = data.img[0];
         const formData = new FormData();
@@ -66,7 +66,7 @@ const AddProduct = () => {
                         .then(result => {
                             console.log(result);
                             toast.success(`${data.name} is added successfully`)
-                            // navigate('/dashboard/managedoctors')
+                            navigate('/dashboard/myproduct')
                         })
 
                 }
@@ -78,7 +78,7 @@ const AddProduct = () => {
         <div className='w-96 p-7'>
             <h3 className='text-4xl'>Add A Product</h3>
 
-            <form onSubmit={handleSubmit(handleAddADoctor)}>
+            <form onSubmit={handleSubmit(handleAddAProduct)}>
 
                 <div className="form-control w-full max-w-xs">
                     <label className="label">

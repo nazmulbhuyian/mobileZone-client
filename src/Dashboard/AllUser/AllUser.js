@@ -30,6 +30,23 @@ const AllUser = () => {
             })
     }
 
+    const handleDelete = (id) => {
+        fetch(`https://mobile-zone-server.vercel.app/users/admin/${id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    toast.success('Make admin successful')
+                    refetch();
+                }
+            })
+    }
+
     return (
         <div>
             <h3 className='text-3xl'>All Users</h3>
@@ -54,9 +71,8 @@ const AllUser = () => {
                                 <td>{user.email}</td>
                                 <td>{user.role}</td>
                                 <td><button className='btn btn-xs btn-primary text-white' onClick={() => handleMakeAdmin(user._id)}>Make Admin</button></td>
-                                {/* <td>{user?.role !== 'admin' &&
-                                    <button className='btn btn-xs btn-primary text-white'>Make Admin</button>}</td> */}
-                                <td><button className='btn btn-xs text-white'>Delete</button></td>
+
+                                <td><button onClick={() => handleDelete(user._id)} className='btn btn-xs text-white'>Delete</button></td>
                             </tr>)
                         }
                     </tbody>
