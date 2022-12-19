@@ -6,7 +6,8 @@ const MyOrder = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `https://mobile-zone-server.vercel.app/bookings?email=${user?.email}`
+    const url = `https://mobile-zone-server.vercel.app/bookings`
+    // const url = `https://mobile-zone-server.vercel.app/bookings?email=${user?.email}`
 
     const { data: bookings = [] } = useQuery({
         queryKey: ['/bookings', user?.email],

@@ -8,7 +8,8 @@ const MyProduct = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `https://mobile-zone-server.vercel.app/myproducts?email=${user?.email}`
+    const url = `https://mobile-zone-server.vercel.app/myproducts`
+    // const url = `https://mobile-zone-server.vercel.app/myproducts?email=${user?.email}`
 
     const { data: products = [], refetch } = useQuery({
         queryKey: ['/myproducts', user?.email],

@@ -10,8 +10,8 @@ const AdvertisedItem = ({ catagory }) => {
 
     const handleBooking = (catagory) => {
         const catagori = {
-            name,
-            email: user.email,
+            // name,
+            // email: user.email,
             price: resale_price,
         }
         fetch('https://mobile-zone-server.vercel.app/bookings', {
@@ -39,8 +39,8 @@ const AdvertisedItem = ({ catagory }) => {
     }
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl p-8">
-            <figure><img src={img} alt="Shoes" /></figure>
+        <div className="card w-96 bg-base-100 shadow-xl">
+            <figure><img src={img} alt="Shoes" width='250px' /></figure>
             <div className="card-body">
                 <h2 className="card-title">
                     Product Name: {name}
@@ -51,7 +51,7 @@ const AdvertisedItem = ({ catagory }) => {
                 <div className="badge-outline">Location: {location}</div>
             </div>
             <div className="card-actions justify-center">
-                <label onClick={() => handleBooking(catagory)} className="btn btn-primary text-white">Book</label>
+                <label onClick={() => handleBooking(catagory)} className="mb-4 btn btn-primary text-white">Book</label>
             </div>
         </div>
     );

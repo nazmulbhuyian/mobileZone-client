@@ -14,8 +14,8 @@ const PhoneCatagory = () => {
 
     return (
         <div className='my-8'>
-            <h2 className='text-center text-primary font-bold text-3xl mb-12'>There is all this catarogy phone</h2>
-            <div className='grid grid-cols-3 gap-5'>
+            <h2 className='text-center text-primary font-bold text-2xl mb-12'>There is all this catarogy phone</h2>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
                 {
                     collections?.map(collection => <Phone
                         key={collection.phone_id}

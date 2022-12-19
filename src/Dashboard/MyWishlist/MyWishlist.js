@@ -7,7 +7,8 @@ const MyWishlist = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `https://mobile-zone-server.vercel.app/wishlists?email=${user?.email}`
+    const url = `https://mobile-zone-server.vercel.app/wishlists`
+    // const url = `https://mobile-zone-server.vercel.app/wishlists?email=${user?.email}`
 
     const { data: wishlists = [], refetch } = useQuery({
         queryKey: ['/wishlists', user?.email],

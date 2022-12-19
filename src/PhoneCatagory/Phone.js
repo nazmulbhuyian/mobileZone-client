@@ -63,7 +63,7 @@ const Phone = ({ collection, setItems }) => {
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl p-8">
-            <figure><img src={img} alt="Shoes" /></figure>
+            <figure><img src={img} alt="Shoes" width='250px' /></figure>
             <h2 className="card-title my-2 text-xl font-bold">Phone Name: {name}</h2>
             <div>
                 <p className=' text-xl font-bold'>Seller Name: {seller_name}</p>
